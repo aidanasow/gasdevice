@@ -1,0 +1,11 @@
+.services {
+  text-align: center;
+  padding: 80px 0;
+  &Inner {
+    margin-top: 36px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+}

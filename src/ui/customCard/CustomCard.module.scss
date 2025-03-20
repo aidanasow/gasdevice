@@ -1,0 +1,47 @@
+.customCard {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+}
+.whyWe {
+  width: 250px;
+  gap: 18px;
+  text-align: center;
+}
+
+.aboutUs {
+  width: 400px;
+  padding: 20px;
+  background-color: var(--color-black);
+  text-align: left;
+  .customCardText {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+}
+
+.services {
+  background-color: var(--color-gray);
+  padding: 20px;
+  width: 610px;
+  text-align: left;
+}
+
+.projects {
+  width: 400px;
+  height: 360px;
+  border-radius: 16px;
+  background-color: var(--color-backgraund);
+  overflow: hidden;
+  .customCardImg {
+    height: 197px;
+  }
+  .customCardText {
+    padding: 14px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

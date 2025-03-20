@@ -2,7 +2,7 @@ import classes from "./Typography.module.scss";
 
 export const Typography = (props) => {
     const {
-        variant,
+        variant="body",
         weight = "",
         children,
         className,
@@ -16,13 +16,8 @@ export const Typography = (props) => {
         h2: "h2",
         h3: "h3",
         h4: "h4",
-        h5: "h5",
-        h6: "h6",
-        button: "p",
         body: "p",
         smallBody: "p",
-        extraSmallBody: "p",
-        span: "span"
     };
 
     const classNamedGenerated = [

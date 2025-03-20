@@ -1,0 +1,32 @@
+.form {
+  width: 610px;
+
+  input, textarea {
+    background-color: var(--color-backgraund);
+    width: 100%;
+    outline: none;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #666;
+    transition: border 0.5s;
+    margin: 10px 0 17px;
+    color: white;
+    font-size: 18px;
+    &:focus {
+      border: 1px solid var(--color-accent);
+    }
+  }
+  input {
+    height: 60px;
+  }
+  .message {
+    height: 160px !important;
+    resize: none;
+  }
+  button {
+    width: 100%;
+    padding: 16px;
+    border-radius: 8px;
+  }
+
+}

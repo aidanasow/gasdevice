@@ -1,21 +1,43 @@
 import classes from "./Header.module.scss";
-import {Container} from "ui/index";
+import {Container, Typography} from "ui/index";
+import {LogoIcon} from "assets/icons/LogoIcon.jsx";
 
 export const Header = () => {
-  return (
+    return (
         <Container>
-          <header className={classes.header}>
-              <nav>
-          <li className={classes.navs}>
-            <ul>О компании</ul>
-            <ul>Услуги компании</ul>
-            <ul>Наши проекты</ul>
-            <ul>Контакты</ul>
-          </li>
-        </nav>
-        <button>Связаться</button>
-          </header>
+            <header className={classes.header}>
+                <div>
+                    <LogoIcon/>
+                </div>
+                <nav>
+                    <li className={classes.navs}>
+                        <ul>
+                            <Typography variant="body">
+                                О компании
+                            </Typography>
+                        </ul>
+                        <ul>
+                            <Typography variant="body">
+                                Услуги компании
+                            </Typography>
+                        </ul>
+                        <ul>
+                            <Typography variant="body">
+                                Наши проекты
+                            </Typography>
+                        </ul>
+                        <ul>
+                            <Typography variant="body">
+                                Контакты
+                            </Typography>
+                        </ul>
+                    </li>
+                </nav>
+                <button>
+                    <Typography variant="body">Связаться</Typography>
+                </button>
+            </header>
         </Container>
-  
-  );
+
+    );
 };

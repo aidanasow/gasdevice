@@ -37,6 +37,9 @@
             width: 100%;
             padding: 50px 0;
         }
+        @media (max-width: 650px) {
+            padding: 36px 0 20px;
+        }
         h4 {
             margin: 18px 0 40px;
             @media (max-width: 1100px) {

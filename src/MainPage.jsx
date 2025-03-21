@@ -6,12 +6,12 @@ export const MainPage = () => {
         <div className={classes.wrapper}>
             <Header />
             <Hero />
-            <WhyWe />
-            <AboutUs id="aboutUs" />
-            <Services id="services" />
-            <Projects id="projects" />
-            <Contacts id="contacts" />
-            <Footer />
+            {/*<WhyWe />*/}
+            {/*<AboutUs id="aboutUs" />*/}
+            {/*<Services id="services" />*/}
+            {/*<Projects id="projects" />*/}
+            {/*<Contacts id="contacts" />*/}
+            {/*<Footer />*/}
         </div>
     );
 };

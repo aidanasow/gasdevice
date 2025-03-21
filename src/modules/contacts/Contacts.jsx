@@ -39,8 +39,9 @@ export const Contacts = ({id}) => {
 
                     </ul>
                     <div className={classes.contactsLeftMap}>
-                        {parse(contactsData?.address_map)}
+                        {typeof contactsData?.address_map === "string" ? parse(contactsData.address_map) : ""}
                     </div>
+
                 </div>
                 <RequestForm/>
             </section>

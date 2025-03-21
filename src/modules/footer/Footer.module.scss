@@ -1,6 +1,13 @@
 .footer {
   border-top: 1px solid #fff;
   padding: 80px 0;
+  @media (max-width: 900px) {
+    padding: 60px 0;
+  }
+  @media (max-width: 500px) {
+    padding: 40px 0;
+  }
+
   &Inner {
     width: 800px;
     margin: 0 auto;
@@ -8,18 +15,28 @@
     flex-direction: column;
     gap: 40px;
     align-items: center;
-
+    @media (max-width: 850px) {
+      width: 664px;
+    }
+    @media (max-width: 650px) {
+      width: 335px;
+    }
     hr {
       width: 100%;
       height: 1px;
     }
   }
+
   &Info {
     width: 668px;
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: center;
+    @media (max-width: 850px) {
+      width: 100%;
+    }
+
     &Links {
       display: flex;
       height: 60px;
@@ -31,19 +48,41 @@
       border: 1px solid #FFF;
       width: fit-content;
     }
+
     .navs {
       display: flex;
       gap: 40px;
+      @media (max-width: 750px) {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+      }
     }
+
     &Time {
       display: flex;
       gap: 20px;
+      @media (max-width: 750px) {
+        flex-direction: column;
+        align-items: center;
+      }
 
       span {
         display: flex;
         gap: 10px;
+
       }
     }
 
+  }
+  span {
+    p {
+      @media (max-width: 650px) {
+        text-align: center;
+      }
+    }
+  }
+  li {
+    cursor: pointer;
   }
 }

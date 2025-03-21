@@ -2,10 +2,20 @@
   padding: 80px 0;
   background-color: var(--color-gray);
   text-align: center;
+  @media (max-width: 900px) {
+    padding: 60px 0;
+  }
+  @media (max-width: 500px) {
+    padding: 40px 0;
+  }
   &Inner {
     display: flex;
-    justify-content: start;
+    justify-content: center;
     gap: 20px;
     margin-top: 36px;
+    flex-wrap: wrap;
+    @media (max-width: 900px) {
+      justify-content: start;
+    }
   }
 }

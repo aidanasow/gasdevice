@@ -1,18 +1,47 @@
 .hero {
-    height: 100vh;
+    height: 120vh;
     background-color: var(--color-gray);
-
+    &Image {
+        display: none;
+        width: 100%;
+        border-radius: 24px;
+        overflow: hidden;
+        @media (max-width: 1100px) {
+            display: block;
+            margin-top: 20px;
+            height: 400px;
+        }
+        @media (max-width: 900px) {
+            height: 332px;
+        }
+        @media (max-width: 650px) {
+            height: 250px;
+        }
+        @media (max-width: 500px) {
+            height: 168px;
+        }
+    }
     &Inner {
         display: flex;
         padding: 80px 0 20px;
+        @media (max-width: 1100px) {
+            flex-direction: column;
+            padding: 0;
+        }
     }
 
     &Left {
         width: 54%;
         padding: 71px 24px 71px 0;
-
+        @media (max-width: 1100px) {
+            width: 100%;
+            padding: 50px 0;
+        }
         h4 {
             margin: 18px 0 40px;
+            @media (max-width: 1100px) {
+                margin-bottom: 20px;
+            }
         }
     }
     &Right {
@@ -20,5 +49,8 @@
         height: 572px;
         border-radius: 24px;
         overflow: hidden;
+        @media (max-width: 1100px) {
+            display: none;
+        }
     }
 }

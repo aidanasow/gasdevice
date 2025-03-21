@@ -1,6 +1,12 @@
 .services {
   text-align: center;
   padding: 80px 0;
+  @media (max-width: 900px) {
+    padding: 60px 0;
+  }
+  @media (max-width: 500px) {
+    padding: 40px 0;
+  }
   &Inner {
     margin-top: 36px;
     display: flex;

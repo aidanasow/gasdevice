@@ -1,15 +1,16 @@
 import {Container, CustomCard} from "ui/index.js";
-import {Good} from "assets/icons/Good.jsx";
 import classes from "./WhyWe.module.scss";
+import {UseHero} from "modules/hero/api/UseHero.js";
 export const WhyWe = () => {
+    const {benefits}=UseHero();
     return (
-
             <Container>
                 <div className={classes.whyWeBlock}>
-                    <CustomCard variant={"whyWe"} icon={<Good/>} desc={"Точность и надежность. Современные решения для учета газа"} />
-                    <CustomCard variant={"whyWe"} icon={<Good/>} desc={"Точность и надежность. Современные решения для учета газа"} />
-                    <CustomCard variant={"whyWe"} icon={<Good/>} desc={"Точность и надежность. Современные решения для учета газа"} />
-                    <CustomCard variant={"whyWe"} icon={<Good/>} desc={"Точность и надежность. Современные решения для учета газа"} />
+                    {
+                        benefits && benefits?.map((benefit, index)=>(
+                            <CustomCard variant={"whyWe"} icon={benefit.icon} desc={benefit.text} key={index} />
+                        ))
+                    }
                 </div>
             </Container>
 

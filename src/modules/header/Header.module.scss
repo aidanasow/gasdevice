@@ -2,15 +2,35 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    gap: 103px;
+    justify-content: space-between;
     padding: 26px 0;
+
+    @media (max-width: 1160px) {
+        padding: 16px 0;
+    }
+    .deskLogo {
+        @media (max-width: 500px) {
+            display: none;
+        }
+    }
+    .miniLogo {
+        display: none;
+        @media (max-width: 500px) {
+            display: block;
+        }
+    }
 }
 .navs {
     display: flex;
     gap: 58px;
-
-    ul {
+    @media (max-width: 1300px) {
+            gap: 40px;
+    }
+    @media (max-width: 1160px) {
+        display: none;
+    }
+    li {
         cursor: pointer;
     }
+
 }

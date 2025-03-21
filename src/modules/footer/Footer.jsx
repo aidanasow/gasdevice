@@ -4,19 +4,35 @@ import {BigLogo} from "assets/icons/BigLogo.jsx";
 import {Phone, Email, Mark} from "assets/index.js";
 import {Time} from "assets/icons/Time.jsx";
 import {Call} from "assets/icons/Call.jsx";
+import {UseContacts} from "modules/contacts/api/UseContacts.js";
+import {useMediaQuery} from "utils/hooks/UseMediaQuery.js";
+import {LogoIcon} from "assets/icons/LogoIcon.jsx";
 
 export const Footer = () => {
+    const {contactsData}=UseContacts();
+    const phone=useMediaQuery("(max-width: 650px)");
+    const scrollToSection = (sectionId) => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({behavior: "smooth"});
+        }
+    };
     return (
         <footer className={classes.footer}>
             <Container>
                 <div className={classes.footerInner}>
-                    <BigLogo/>
+                    <div>
+                        {
+                            phone? <LogoIcon/> : <BigLogo/>
+                        }
+                    </div>
+
                     <div className={classes.footerInfo}>
                         <div className={classes.footerInfoLinks}>
-                            <a href="#">
+                            <a href={`tel:${contactsData?.phone}`}>
                                 <Phone/>
                             </a>
-                            <a href="#">
+                            <a href={`https://mailto:${contactsData?.email}`}>
                                 <Email/>
                             </a>
                             <a href="#">
@@ -24,41 +40,41 @@ export const Footer = () => {
                             </a>
                         </div>
                         <nav>
-                            <li className={classes.navs}>
-                                <ul>
+                        <ul className={classes.navs}>
+                                <li onClick={() => scrollToSection("aboutUs")}>
                                     <Typography variant="body" weight={"weight-400"}>
                                         О компании
                                     </Typography>
-                                </ul>
-                                <ul>
+                                </li>
+                                <li onClick={() => scrollToSection("services")}>
                                     <Typography variant="body" weight={"weight-400"}>
                                         Услуги компании
                                     </Typography>
-                                </ul>
-                                <ul>
+                                </li>
+                                <li onClick={() => scrollToSection("projects")}>
                                     <Typography variant="body" weight={"weight-400"}>
                                         Наши проекты
                                     </Typography>
-                                </ul>
-                                <ul>
+                                </li>
+                                <li onClick={() => scrollToSection("contacts")}>
                                     <Typography variant="body" weight={"weight-400"}>
                                         Контакты
                                     </Typography>
-                                </ul>
-                            </li>
+                                </li>
+                            </ul>
                         </nav>
 
                         <div className={classes.footerInfoTime}>
                             <span>
                                 <Time/>
                                 <Typography variant="body" weight={"weight-400"}>
-                                        Пн-Пт с 8:00 до 18:00
+                                        {contactsData?.work_time}
                                     </Typography>
                             </span>
                             <span>
                                 <Call/>
                                 <Typography variant="body" weight={"weight-400"}>
-                                        +996 703 11 22 33
+                                        {contactsData?.phone}
                                     </Typography>
                             </span>
                         </div>

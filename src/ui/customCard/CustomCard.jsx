@@ -1,12 +1,14 @@
 import classes from "./CustomCard.module.scss";
 import { Typography } from "./../typography/Typography";
 
-export const CustomCard = ({ title, desc, image, imageAlt, icon, variant, key }) => {
+export const CustomCard = ({ title, desc, image, imageAlt, icon, variant }) => {
     return (
-        <div className={`${classes.customCard} ${classes[variant]}`} key={key}>
+        <div className={`${classes.customCard} ${classes[variant]}`}>
 
             { icon && (
-                <div >{icon}</div>
+                <div className={classes.customCardIcon}>
+                    <img src={icon} alt="icon"/>
+                </div>
             )}
 
             {variant==="projects" && (
@@ -21,7 +23,7 @@ export const CustomCard = ({ title, desc, image, imageAlt, icon, variant, key })
                 <Typography weight={"weight-700"}>{title}</Typography>
                 }
                 {
-                    variant!=="whyWe"? <Typography variant={"smallBody"}>{desc}</Typography>:
+                    variant!=="whyWe"? <div>{desc}</div>:
                         <Typography>{desc}</Typography>
                 }
 

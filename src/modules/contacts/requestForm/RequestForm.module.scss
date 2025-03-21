@@ -1,6 +1,14 @@
 .form {
   width: 610px;
-
+  @media (max-width:1300px) {
+    width: 500px;
+  }
+  @media (max-width: 650px) {
+    width: 450px;
+  }
+  @media (max-width: 500px) {
+    width: 335px;
+  }
   input, textarea {
     background-color: var(--color-backgraund);
     width: 100%;

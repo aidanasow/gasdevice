@@ -10,7 +10,6 @@ import parse from "html-react-parser";
 export const Contacts = ({id}) => {
     const {contactsData, error}=UseContacts();
     if (error) return <p>Ошибка: {error}</p>;
-    if (!contactsData) return <p>Загрузка...</p>;
     return (
         <Container>
             <section className={classes.contacts} id={id}>

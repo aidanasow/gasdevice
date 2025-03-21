@@ -8,7 +8,6 @@ export const Services = ({id}) => {
     const {data, error}=UseFetchData("3_service/");
 
     if (error) return <p>Ошибка: {error}</p>;
-    if (!data) return <p>Загрузка...</p>;
     return (
         <Container>
             <div className={classes.services} id={id}>

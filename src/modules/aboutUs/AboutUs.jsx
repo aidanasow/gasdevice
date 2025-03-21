@@ -6,8 +6,6 @@ export const AboutUs = ({id}) => {
     const {data, error}=UseFetchData("2_about-company/");
 
     if (error) return <p>Ошибка: {error}</p>;
-    if (!data) return <p>Загрузка...</p>;
-
     return (
         <section className={classes.aboutUs} id={id}>
             <Container>

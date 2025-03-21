@@ -11,9 +11,6 @@ import parse from "html-react-parser";
 export const Projects = ({id}) => {
     const {data, error}=UseFetchData("4_our-project/");
     if (error) return <p>Ошибка: {error}</p>;
-    if (!data) return <p>Загрузка...</p>;
-
-
 
     return (
         <section className={classes.projects} id={id}>

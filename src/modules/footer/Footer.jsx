@@ -27,13 +27,13 @@ export const Footer = () => {
 
                     <div className={classes.footerInfo}>
                         <div className={classes.footerInfoLinks}>
-                            <a href={`tel:${contactsData?.phone}`}>
+                            <a href={`tel:${contactsData?.phone}`} target="_blank">
                                 <Phone/>
                             </a>
-                            <a href={`https://mailto:${contactsData?.email}`}>
+                            <a href={`https://mailto:${contactsData?.email}`} target="_blank">
                                 <Email/>
                             </a>
-                            <a href="#">
+                            <a href={contactsData?.address_link} target="_blank">
                                 <Mark/>
                             </a>
                         </div>

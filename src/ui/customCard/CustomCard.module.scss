@@ -3,6 +3,8 @@
   flex-direction: column;
   border-radius: 16px;
   align-items: center;
+  flex: 1;
+  min-height: 100%;
   &Icon {
     width: 80px;
     height: 80px;

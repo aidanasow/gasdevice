@@ -7,10 +7,8 @@ import {Email} from "assets/icons/Email.jsx";
 import {RequestForm} from "./requestForm/RequestForm.jsx";
 import {UseContacts} from "modules/contacts/api/UseContacts.js";
 import parse from "html-react-parser";
-
 export const Contacts = ({id}) => {
     const {contactsData, error}=UseContacts();
-
     if (error) return <p>Ошибка: {error}</p>;
     if (!contactsData) return <p>Загрузка...</p>;
     return (

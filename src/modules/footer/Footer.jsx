@@ -21,10 +21,8 @@ export const Footer = () => {
         <footer className={classes.footer}>
             <Container>
                 <div className={classes.footerInner}>
-                    <div>
-                        {
-                            phone? <LogoIcon/> : <BigLogo/>
-                        }
+                    <div onClick={() => window.scrollTo({top: 0, behavior: "smooth"})}>
+                        {phone ? <LogoIcon/> : <BigLogo/>}
                     </div>
 
                     <div className={classes.footerInfo}>

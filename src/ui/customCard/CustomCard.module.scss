@@ -3,7 +3,6 @@
   flex-direction: column;
   border-radius: 16px;
   align-items: center;
-  flex: 1;
   min-height: 100%;
   &Icon {
     width: 80px;
@@ -36,15 +35,20 @@
   padding: 20px;
   background-color: var(--color-black);
   text-align: left;
+  align-items: start;
   @media (max-width: 900px) {
-    width: 100% !important;
+    width: 100% ;
     height: auto;
   }
   .customCardText {
     display: flex;
     flex-direction: column;
     gap: 14px;
+    @media (max-width: 705px) {
+      align-items: start;
+    }
   }
+
 }
 
 .services {
@@ -61,6 +65,8 @@
   }
   @media (max-width: 705px) {
     width: 100%;
+    min-width: 100%;
+    flex: 1;
   }
 }
 
@@ -72,11 +78,9 @@
   overflow: hidden;
   @media (max-width: 900px) {
     width: 321px;
-    //height: 321px;
   }
   @media (max-width: 600px) {
     width: 300px;
-    //height: 300px;
   }
   .customCardImg {
     height: 197px;

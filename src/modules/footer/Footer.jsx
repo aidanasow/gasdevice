@@ -30,7 +30,7 @@ export const Footer = () => {
                             <a href={`tel:${contactsData?.phone}`} target="_blank">
                                 <Phone/>
                             </a>
-                            <a href={`https://mailto:${contactsData?.email}`} target="_blank">
+                            <a href={`mailto:${contactsData?.email}`} target="_blank" rel="noopener noreferrer">
                                 <Email/>
                             </a>
                             <a href={contactsData?.address_link} target="_blank">
@@ -38,7 +38,7 @@ export const Footer = () => {
                             </a>
                         </div>
                         <nav>
-                        <ul className={classes.navs}>
+                            <ul className={classes.navs}>
                                 <li onClick={() => scrollToSection("aboutUs")}>
                                     <Typography variant="body" weight={"weight-400"}>
                                         О компании

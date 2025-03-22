@@ -60,6 +60,7 @@
   flex-direction: column;
   align-items: start;
   text-align: start;
+  gap: 10px;
   @media (max-width: 900px) {
     width: 322px;
   }
@@ -67,6 +68,11 @@
     width: 100%;
     min-width: 100%;
     flex: 1;
+  }
+  .customCardText {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
 }
 

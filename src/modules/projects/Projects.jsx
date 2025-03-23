@@ -40,6 +40,7 @@ export const Projects = ({id}) => {
                                 title={project.title}
                                 desc={parse(project.description)}
                                 image={project.image}
+                                imageAlt={project.title}
                             />
                         </SwiperSlide>
                     ))}

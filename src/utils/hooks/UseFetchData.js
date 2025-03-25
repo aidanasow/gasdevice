@@ -8,7 +8,7 @@ const useFetchData = (endpoint) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await instance().get(endpoint);
+                const response = await instance.get(endpoint);
                 setData(response.data);
             } catch (err) {
                 setError(err.message);

@@ -3,12 +3,15 @@ import Cookies from "js-cookie";
 
 const BASE_URL = import.meta.env.VITE_API_URL;
 
-export const instance=()=> axios.create({
-    baseURL:BASE_URL,
-    withCredentials: true,
-});
+const createRequester = () =>
+    axios.create({
+        baseURL: BASE_URL,
+        withCredentials: true,
+    });
 
-export const postApi = instance();
+export const postApi = createRequester();
+export const instance = createRequester();
+
 
 
 postApi.interceptors.request.use((config) => {

@@ -5,10 +5,11 @@ import {Phone} from "assets/icons/Phone.jsx";
 import {Mark} from "assets/icons/Mark.jsx";
 import {Email} from "assets/icons/Email.jsx";
 import {RequestForm} from "./requestForm/RequestForm.jsx";
-import {UseContacts} from "modules/contacts/api/UseContacts.js";
 import parse from "html-react-parser";
+import {useData} from "../../context/DataContext.jsx";
 export const Contacts = ({id}) => {
-    const {contactsData, error}=UseContacts();
+    const {contactsData, error}=useData();
+
     if (error) return <p>Ошибка: {error}</p>;
     return (
         <Container>

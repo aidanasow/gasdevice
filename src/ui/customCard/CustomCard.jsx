@@ -13,7 +13,7 @@ export const CustomCard = ({ title, desc, image, imageAlt, icon, variant }) => {
 
             {variant==="projects" && (
                 <div className={classes.customCardImg}>
-                    <img src={image} alt={imageAlt} />
+                    <img src={image} alt={imageAlt}  loading={"lazy"}/>
                 </div>
             )}
 

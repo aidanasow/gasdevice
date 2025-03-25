@@ -9,13 +9,13 @@
         padding: 16px 0;
     }
     .deskLogo {
-        @media (max-width: 500px) {
+        @media (max-width: 530px) {
             display: none;
         }
     }
     .miniLogo {
         display: none;
-        @media (max-width: 500px) {
+        @media (max-width: 530px) {
             display: block;
         }
     }

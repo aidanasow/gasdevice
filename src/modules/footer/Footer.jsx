@@ -4,13 +4,14 @@ import {BigLogo} from "assets/icons/BigLogo.jsx";
 import {Phone, Email, Mark} from "assets/index.js";
 import {Time} from "assets/icons/Time.jsx";
 import {Call} from "assets/icons/Call.jsx";
-import {UseContacts} from "modules/contacts/api/UseContacts.js";
 import {useMediaQuery} from "utils/hooks/UseMediaQuery.js";
 import {LogoIcon} from "assets/icons/LogoIcon.jsx";
+import {useData} from "../../context/DataContext.jsx";
 
 export const Footer = () => {
-    const {contactsData}=UseContacts();
-    const phone=useMediaQuery("(max-width: 650px)");
+    const {contactsData}=useData();
+
+    const phone = useMediaQuery("(max-width: 750px)");
     const scrollToSection = (sectionId) => {
         const element = document.getElementById(sectionId);
         if (element) {
@@ -72,7 +73,9 @@ export const Footer = () => {
                             <span>
                                 <Call/>
                                 <Typography variant="body" weight={"weight-400"}>
-                                        {contactsData?.phone}
+                                     <a href={`tel:${contactsData?.phone}`} target="_blank">
+                                  {contactsData?.phone}
+                            </a>
                                     </Typography>
                             </span>
                         </div>

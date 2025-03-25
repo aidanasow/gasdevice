@@ -27,10 +27,13 @@ button {
     color: var(--color-white);
     border: none;
     cursor: pointer;
+    @media (max-width: 500px) {
+        padding: 8px 20px;
+    }
 }
 
 html {
-    color: var(--color-white);
+    color: var(--color-text);
 }
 
 body {

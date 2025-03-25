@@ -1,0 +1,18 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  .spinner {
+
+    width: 3rem;
+    height: 3rem;
+    border: 0.4rem solid #ccc;
+    border-top: 0.4rem solid #0077B6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }}

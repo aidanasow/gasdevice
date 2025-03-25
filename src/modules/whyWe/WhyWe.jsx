@@ -1,8 +1,9 @@
 import {Container, CustomCard} from "ui/index.js";
 import classes from "./WhyWe.module.scss";
-import {UseHero} from "modules/hero/api/UseHero.js";
+import {useData} from "../../context/DataContext.jsx";
 export const WhyWe = () => {
-    const {benefits}=UseHero();
+    const {heroBlockData}=useData();
+    const benefits=heroBlockData?.benefits;
     return (
             <Container>
                 <div className={classes.whyWeBlock}>

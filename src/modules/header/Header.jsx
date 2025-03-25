@@ -1,11 +1,11 @@
 import classes from "./Header.module.scss";
 import { Container, Typography } from "ui/index";
 import { LogoIcon } from "assets/icons/LogoIcon.jsx";
-import {UseContacts} from "modules/contacts/api/UseContacts.js";
 import {MiniLogo} from "assets/icons/MiniLogo.jsx";
+import {useData} from "../../context/DataContext.jsx";
 
 export const Header = () => {
-    const {contactsData}=UseContacts();
+    const {contactsData}=useData();
     const scrollToSection = (sectionId) => {
         const element = document.getElementById(sectionId);
         if (element) {

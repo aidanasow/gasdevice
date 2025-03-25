@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import axios from "axios";
 import {ToastContainer, toast, Bounce} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import classes from "./RequestForm.module.scss";
 import { Typography } from "ui/index.js";
+import {postApi} from "utils/axios/axios.js";
 
 export const RequestForm = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
@@ -13,7 +13,7 @@ export const RequestForm = () => {
     const onSubmit = async (data) => {
         setIsSubmitting(true);
         try {
-            await axios.post("https://gasdevice.kg/api/v1/6_application/", data);
+            await postApi.post("https://gasdevice.kg/api/v1/6_application/", data);
             toast.success("Ваша заявка успешно отправлена", {
                 position: "top-right",
                 autoClose: 2000,

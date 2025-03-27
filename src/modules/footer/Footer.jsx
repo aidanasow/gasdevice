@@ -81,9 +81,10 @@ export const Footer = () => {
                         </div>
                     </div>
                     <hr/>
-                    <span>
+                    <span >
                         <Typography variant="body" weight={"weight-400"}>
-                                        © 2025 Газприборавтоматика. Все права защищены.
+                                        © 2025 Газприборавтоматика
+                            ИП Вильданов. Все права защищены.
                                     </Typography>
                     </span>
                 </div>

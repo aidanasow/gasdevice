@@ -34,7 +34,7 @@ export const Projects = ({id}) => {
                     }}
                 >
                     {data&& data?.map((project, index) => (
-                        <SwiperSlide key={index}>
+                        <SwiperSlide key={index} style={{display: "flex", flexDirection: "column",minHeight: "100%"}}>
                             <CustomCard
                                 variant="projects"
                                 title={project.title}
@@ -42,7 +42,7 @@ export const Projects = ({id}) => {
                                 image={project.image}
                                 imageAlt={project.title}
                             />
-                        </SwiperSlide>
+                         </SwiperSlide>
                     ))}
                 </Swiper>
             </div>
